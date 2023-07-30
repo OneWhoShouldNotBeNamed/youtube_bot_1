@@ -1,0 +1,17 @@
+name: "Youtube bot"
+on:
+  schedule:
+    - cron: "*/6 * * * *"
+jobs:
+  stale:
+    runs-on: ubuntu-latest
+    steps:
+    - name: 🛒 Checkout
+      uses: actions/checkout@v2
+    - name: 🔎 Check IP
+      run: curl https://api.ipify.org  
+    - uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'   
+    - name: Open Youtube
+      run: python youtube.py
