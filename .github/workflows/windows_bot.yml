@@ -1,7 +1,7 @@
-name: "Youtube bot"
+name: "Youtube windows bot"
 on:
   schedule:
-        - cron: "*/5 * * * *"
+        - cron: "*/1 * * * *"
 jobs:
   stale:
     runs-on: windows-latest
